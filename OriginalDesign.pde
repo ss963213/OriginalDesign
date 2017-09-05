@@ -1,7 +1,5 @@
-void setup()
-{
-  size(400,400);
-}
+void setup(){size(400,400);}
+
 void gunShot()
 {int x=round(random(0,400));
   int y=round(random(0,400));
@@ -26,22 +24,21 @@ beginShape();
 }
 void target(){
   stroke(0,0,0);
+  fill(255,255,255,25);
+ rect(0,0,400,400);
  int size = 391;
  while(size>13){
-   fill(255,255,255,5);
-   
+   noFill();
    ellipse(200,200,size,size);
    size=size-32;
  }
- rect(0,0,400,400);
  fill(255,0,0);
  ellipse(200,200,15,15);
 }
-void draw()
-{
+
+void draw(){
   gunShot();
   target();
 }
-
 
 
